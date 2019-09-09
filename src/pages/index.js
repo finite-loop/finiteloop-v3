@@ -16,7 +16,7 @@ const IndexPage = () => {
       <SEO title="Home" />
       <div className="overlayContainer">
         <ReactFullpage
-          licenseKey={process.env.FULLPAGE_LICENSE_KEY}
+          licenseKey={process.env.GATSBY_FULLPAGE_LICENSE_KEY}
           anchors={["intro", "teams"]}
           menu="#menu"
           scrollingSpeed={1000}
