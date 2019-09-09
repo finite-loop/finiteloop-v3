@@ -14,24 +14,22 @@ const IndexPage = () => {
   return (
     <>
       <SEO title="Home" />
-      <div className="overlayContainer">
-        <ReactFullpage
-          licenseKey={process.env.GATSBY_FULLPAGE_LICENSE_KEY}
-          anchors={["intro", "teams"]}
-          menu="#menu"
-          scrollingSpeed={1000}
-          navigation
-          onLeave={onLeave.bind(this)}
-          render={({ state, fullpageApi }) => {
-            return (
-              <div>
-                <Hero />
-                <Teams />
-              </div>
-            )
-          }}
-        />
-      </div>
+      <ReactFullpage
+        licenseKey={process.env.GATSBY_FULLPAGE_LICENSE_KEY}
+        anchors={["intro", "teams"]}
+        menu="#menu"
+        scrollingSpeed={1000}
+        navigation
+        onLeave={onLeave.bind(this)}
+        render={({ state, fullpageApi }) => {
+          return (
+            <div className="text-center">
+              <Hero />
+              <Teams />
+            </div>
+          )
+        }}
+      />
       <Menu />
     </>
   )
