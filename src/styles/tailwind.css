@@ -1,0 +1,7 @@
+@tailwind base;
+
+@import "./menu.css";
+
+@tailwind components;
+
+@tailwind utilities;

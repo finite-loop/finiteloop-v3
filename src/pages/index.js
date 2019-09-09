@@ -1,21 +1,40 @@
 import React from "react"
-import { Link } from "gatsby"
+import ReactFullpage from "@fullpage/react-fullpage"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Menu from "../components/menu"
+import Teams from "../components/team"
+import Hero from "../components/hero"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+const IndexPage = () => {
+  const onLeave = (origin, destination, direction) => {
+    console.log("onLeave", { origin, destination, direction })
+  }
+
+  return (
+    <>
+      <SEO title="Home" />
+      <div className="container">
+        <ReactFullpage
+          licenseKey={process.env.FULLPAGE_LICENSE_KEY}
+          anchors={["intro", "teams"]}
+          menu="#menu"
+          scrollingSpeed={1000}
+          navigation
+          onLeave={onLeave.bind(this)}
+          render={({ state, fullpageApi }) => {
+            return (
+              <div>
+                <Hero />
+                <Teams />
+              </div>
+            )
+          }}
+        />
+      </div>
+      <Menu />
+    </>
+  )
+}
 
 export default IndexPage
