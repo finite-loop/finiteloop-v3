@@ -13,10 +13,10 @@ const FullPage = () => (
     navigation
     render={({ state, fullpageApi }) => {
       return (
-        <>
+        <div className="text-center">
           <Hero />
           <Teams />
-        </>
+        </div>
       )
     }}
   />

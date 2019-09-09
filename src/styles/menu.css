@@ -36,14 +36,14 @@
 
 .menuContainer {
   position: fixed;
-  top: 5%;
+  top: 2%;
   right: 2%;
   height: 27px;
   width: 35px;
   cursor: pointer;
   z-index: 100;
   transition: opacity 0.25s ease;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 
 .menuContainer:hover {
