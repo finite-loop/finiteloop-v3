@@ -2,7 +2,11 @@ import React from "react"
 import SEO from "./seo"
 
 const Teams = () => (
-  <div className="section" data-anchor="teams">
+  <div
+    className="section"
+    style={{ backgroundColor: "#a83723", color: "#fff" }}
+    data-anchor="teams"
+  >
     <ul className="actions">
       <li>Partha</li>
       <li>Anand</li>

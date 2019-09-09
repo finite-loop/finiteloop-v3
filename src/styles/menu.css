@@ -1,26 +1,26 @@
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
 
-.container {
+.overlayContainer {
   width: 100%;
   text-align: center;
   margin: 0 auto;
   font-family: "Varela Round", sans-serif;
 }
 
-.container button {
+.overlayContainer button {
   display: inline-block;
   position: relative;
   text-align: center;
-  color: #1abc9c;
+  color: #1d3740;
   text-decoration: none;
   font-size: 20px;
   overflow: hidden;
   top: 5px;
 }
-.container button:after {
+.overlayContainer button:after {
   content: "";
   position: absolute;
-  background: #1abc9c;
+  background: #1d3740;
   height: 2px;
   width: 0%;
   transform: translateX(-50%);
@@ -28,9 +28,9 @@
   bottom: 0;
   transition: 0.35s ease;
 }
-.container button:hover:after,
-.container button:focus:after,
-.container button:active:after {
+.overlayContainer button:hover:after,
+.overlayContainer button:focus:after,
+.overlayContainer button:active:after {
   width: 100%;
 }
 
@@ -43,6 +43,7 @@
   cursor: pointer;
   z-index: 100;
   transition: opacity 0.25s ease;
+  margin-right: 1rem;
 }
 
 .menuContainer:hover {
@@ -64,7 +65,7 @@
 }
 
 .menuContainer span {
-  background: #1abc9c;
+  background: #1d3740;
   border: none;
   height: 5px;
   width: 100%;
@@ -85,7 +86,7 @@
 
 .overlay {
   position: fixed;
-  background: #1abc9c;
+  background: #1d3740;
   top: 0;
   left: 0;
   width: 100%;

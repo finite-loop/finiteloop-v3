@@ -14,7 +14,7 @@ const IndexPage = () => {
   return (
     <>
       <SEO title="Home" />
-      <div className="container">
+      <div className="overlayContainer">
         <ReactFullpage
           licenseKey={process.env.FULLPAGE_LICENSE_KEY}
           anchors={["intro", "teams"]}
