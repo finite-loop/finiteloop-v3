@@ -2,6 +2,16 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const tailwind = require("tailwindcss")
+
+// const purgecss = require("@fullhuman/postcss-purgecss")({
+//   // Specify the paths to all of the template files in your project
+//   content: ["./src/**/*.html", "./src/**/*.jsx"],
+
+//   // Include any special characters you're using in this regular expression
+//   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
+// })
+
 module.exports = {
   siteMetadata: {
     title: `FiniteLoop`,
@@ -35,14 +45,25 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    `gatsby-plugin-postcss`,
     {
-      resolve: `gatsby-plugin-purgecss`,
+      resolve: `gatsby-plugin-postcss`,
       options: {
-        tailwind: true,
-        purgeOnly: [`src/styles/tailwind.css`],
+        postCssPlugins: [
+          tailwind("./tailwind.config.js"),
+          require("autoprefixer"),
+          // [purgecss],
+        ],
       },
     },
+    // {
+    //   resolve: `gatsby-plugin-purgecss`,
+    //   options: {
+    //     printRejected: false,
+    //     develop: false,
+    //     tailwind: true,
+    //     purgeOnly: [`src/styles/tailwind.css`],
+    //   },
+    // },
     `gatsby-plugin-remove-serviceworker`,
   ],
 }

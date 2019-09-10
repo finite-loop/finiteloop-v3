@@ -4,6 +4,8 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
+import "./src/styles/tailwind.css"
+
 // export const onServiceWorkerUpdateReady = () => {
 //   const answer = window.confirm(
 //     `This site has been updated with better experiance and new content. ` +

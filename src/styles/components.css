@@ -1,6 +1,10 @@
+/* purgecss start ignore */
+
 .logo {
-  @apply .fixed .h-12 .w-12 .ml-2 .rounded-full;
+  @apply fixed h-12 w-12 ml-2 rounded-full;
   top: 2%;
   left: 2%;
   z-index: 100;
 }
+
+/* purgecss end ignore */
